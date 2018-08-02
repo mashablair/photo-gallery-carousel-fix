@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thumbnail Photo Gallery (With Mobile Carousel)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- JQuery -->
+        <script type="text/javascript" src="http://cdn.rentcafe.com/js/jquery.min.js"></script>
+        
+        <!-- OWL CAROUSEL -->
+        <link rel="stylesheet" href="libraries/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="libraries/owl-carousel/owl.theme.css">
+        <script type="text/javascript" src="libraries/owl-carousel/owl.carousel.js"></script>
+        
+        <!-- PHOTO GALLERY -->
+        <script type="text/javascript" src="photo-gallery.js"></script>
+        <link rel="stylesheet" href="photo-gallery.css">
+        
+    </head>
+
+    <body>
+		
+<!-- 
+
+	The fix is to hide .photoGalleryItemCaption items. 
+	Then insert div.captionMobile after div.photoGalleryThumbs as another child of .photoGallery
+	The content of div.captionMobile should be dynamically updated with text value of .photoGalleryItemCaption or input value of that image
+	Then add div.imgPagination inside div.item after <a><img></a>
+
+-->
+
+        <div id="photoGallery">
+            
+			<div class="photoGalleryImageOuter">
+                <div class="prevBtn end"><a href="#" title="Previous"></a></div>
+                <div class="nextBtn"><a href="#" title="Next"></a></div>
+                <div id="photoGalleryImage">
+                    <img src="" alt="" class="" />
+                </div>
+				<div class="photoGalleryCaption">...Some caption...</div>
+            </div>
+            
+			<div id="photoGalleryThumbs" class="owl-carousel">
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/06.jpg" alt="Image 01" /></a>
+					<div class="imgPagination">1 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.</div>
+					<input type="hidden" value="Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/07.jpg" alt="Image 02" /></a>
+					<div class="imgPagination">2 of 16</div>
+					<input type="hidden" value="">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/01.jpg" alt="Image 03" /></a>
+					<div class="imgPagination">3 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Prep and create on durable luxury. Kitchens and baths at Skye have creamy polished granite countertops.</div>
+					<input type="hidden" value="Prep and create on durable luxury. Kitchens and baths at Skye have creamy polished granite countertops.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/02.jpg" alt="Image 04" /></a>
+					<div class="imgPagination">4 of 16</div>
+					<input type="hidden" value="">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/03.jpg" alt="Image 05" /></a>
+					<div class="imgPagination">5 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Each home is stocked with a GE Energy Star appliance package in sleek black and silver.</div>
+					<input type="hidden" value="Each home is stocked with a GE Energy Star appliance package in sleek black and silver.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/04.jpg" alt="Image 06" /></a>
+					<div class="imgPagination">6 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">GATHER. COOK. EAT. REPEAT. Dream kitchens come standard at Skye apartments.</div>
+					<input type="hidden" value="GATHER. COOK. EAT. REPEAT. Dream kitchens come standard at Skye apartments.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/05.jpg" alt="Image 07" /></a>
+					<div class="imgPagination">7 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Our neighborhood.</div>
+					<input type="hidden" value="Our neighborhood">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/08.jpg" alt="Image 08" /></a>
+					<div class="imgPagination">8 of 16</div>
+					<input type="hidden" value="">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/09.jpg" alt="Image 09" /></a>
+					<div class="imgPagination">9 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">All Skye kitchens are equipped with GE Stainless Steel finish appliance packages.</div>
+					<input type="hidden" value="All Skye kitchens are equipped with GE Stainless Steel finish appliance packages.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/10.jpg" alt="Image 10" /></a>
+					<div class="imgPagination">10 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Kitchens with Moen Arbor One high-arc gooseneck spout design provides optimal room under the faucet for any size task.</div>
+					<input type="hidden" value="Kitchens with Moen Arbor One high-arc gooseneck spout design provides optimal room under the faucet for any size task.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/12.jpg" alt="Image 11" /></a>
+					<div class="imgPagination">11 of 16</div>
+					<input type="hidden" value="">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/13.jpg" alt="Image 12" /></a>
+					<div class="imgPagination">12 of 16</div>
+					<input type="hidden" value="">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/14.jpg" alt="Image 13" /></a>
+					<div class="imgPagination">13 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Plenty of space in our 1 Bedroom living room.</div>
+					<input type="hidden" value="Plenty of space in our 1 Bedroom living room">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/15.jpg" alt="Image 14" /></a>
+					<div class="imgPagination">14 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.</div>
+					<input type="hidden" value="Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/16.jpg" alt="Image 15" /></a>
+					<div class="imgPagination">15 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.</div>
+					<input type="hidden" value="Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.">
+				</div>
+                
+				<div class="item">
+					<a href="#"><img src="https://cdn.rcqatol.com/DocumentManager/3/219563/17.jpg" alt="Image 16" /></a>
+					<div class="imgPagination">16 of 16</div>
+					<!-- if caption, insert this div.photoGalleryItemCaption: -->
+					<div class="photoGalleryItemCaption hide">Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.</div>
+					<input type="hidden" value="Gourmet kitchens at Skye provide all new black and silver appliances including gas range stoves.">
+				</div>
+				
+            </div>
+			
+			<!--  This div displays image's caption on mobile devices only and should be added to html dynamically -->
+<!--			<div class="captionMobile">...Mobile caption dynamically generated based on image's input field...</div>-->
+			<div class="captionMobile"></div>
+			
+<!--			In Fairfield's custom theme, there is a div.item-captin for custom caption on mobile -- remove it when updating this plugin -->
+			
+			
+        </div>
+
+    </body>
+</html>
