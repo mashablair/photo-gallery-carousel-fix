@@ -9,7 +9,7 @@ $(document).ready(function () {
             items: 5, // on wide screen, 5 thumbs will be displayed below img viewer 
             itemsDesktop: [1199, 5],
             itemsDesktopSmall: [991, 4],
-            itemsTablet: [767, 1],
+            itemsTablet: [1025, 1], // changed from '767' to include iPad on vertical 
             itemsMobile: [599, 1],
             lazyLoad: true, // delays loading images to improve mobile performance 
             afterInit: function () {

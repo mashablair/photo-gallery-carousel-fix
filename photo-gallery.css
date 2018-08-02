@@ -168,7 +168,8 @@ body{
     max-width:100%;
 }
 
-@media (min-width: 768px){
+/* this view will include iPad Pro in vertical orientation */
+@media (min-width: 1025px){  /* changed from '768' */
     #photoGallery > .photoGalleryCaption{
         display:none;
     }
@@ -259,7 +260,8 @@ body{
 	display: none; 
 }
 
-@media (max-width: 767px) {
+/* this view will include iPad Pro in vertical orientation */
+@media (max-width: 1025px) { /* changed from '767' */
 	
 	#photoGallery .owl-controls{
         display: none !important;
@@ -317,14 +319,7 @@ body{
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 	}
-	
-	
-	
-	
-	
-	
 
-	
 }
 
 
